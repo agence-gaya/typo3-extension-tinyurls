@@ -31,7 +31,7 @@ class StoragePageQueryRestrictionTest extends TestCase
      */
     protected $storagePageQueryRestriction;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         if (!interface_exists('TYPO3\\CMS\\Core\\Database\\Query\\Restriction\\QueryRestrictionInterface')) {
             $this->markTestSkipped('The new Doctrine DBAL QueryRestrictionInterface does not exist.');

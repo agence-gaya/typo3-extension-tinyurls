@@ -31,7 +31,7 @@ class TinyUrlValidatorTest extends TestCase
      */
     protected $tinyUrlValidator;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->tinyUrlRepositoryMock = $this->createMock(TinyUrlRepository::class);
         $this->tinyUrlValidator = new TinyUrlValidator();

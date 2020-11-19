@@ -40,7 +40,7 @@ class UrlUtilsTest extends TestCase
      */
     protected $urlUtils;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->extensionConfigurationMock = $this->createMock(ExtensionConfiguration::class);
         $this->generalUtilityMock = $this->createMock(GeneralUtilityWrapper::class);

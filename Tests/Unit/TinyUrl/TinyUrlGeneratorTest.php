@@ -37,7 +37,7 @@ class TinyUrlGeneratorTest extends TestCase
      */
     protected $urlUtilsMock;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->tinyUrlRepositoryMock = $this->createMock(TinyUrlRepository::class);
         $this->urlUtilsMock = $this->createMock(UrlUtils::class);

@@ -38,7 +38,7 @@ class ApiTest extends AbstractFunctionalTestCase
     /**
      * Initializes the test subject.
      */
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
         $this->tinyUrlsApi = GeneralUtility::makeInstance(Api::class);

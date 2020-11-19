@@ -29,7 +29,7 @@ class TinyurlViewHelperTest extends ViewHelperBaseTestcase
      */
     protected $tinyUrlApi;
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
 

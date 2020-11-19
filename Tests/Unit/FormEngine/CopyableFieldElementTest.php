@@ -45,7 +45,7 @@ class CopyableFieldElementTest extends TestCase
      */
     private $iconFactoryMock;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $data = ['parameterArray' => ['itemFormElValue' => 'testval']];
         $this->createCopyableFieldElement($data);

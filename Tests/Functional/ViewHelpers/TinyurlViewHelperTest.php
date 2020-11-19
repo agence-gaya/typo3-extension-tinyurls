@@ -29,7 +29,7 @@ class TinyurlViewHelperTest extends AbstractFunctionalTestCase
     /**
      * Imports the pages database fixture.
      */
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
         $this->importDataSet(__DIR__ . '/../Fixtures/Database/pages.xml');

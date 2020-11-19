@@ -35,7 +35,7 @@ class DatabaseRecordList extends TestCase
      */
     protected $parentRecordListMock;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->parentRecordListMock = $this->createMock(AbstractDatabaseRecordList::class);
         $this->databaseRecordListHooks = new DatabaseRecordListHooks();

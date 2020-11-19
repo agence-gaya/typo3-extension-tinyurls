@@ -32,7 +32,7 @@ class TceDataMapTest extends TestCase
      */
     protected $tinyUrlRepositoryMock;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->tinyUrlRepositoryMock = $this->createMock(TinyUrlRepository::class);
 

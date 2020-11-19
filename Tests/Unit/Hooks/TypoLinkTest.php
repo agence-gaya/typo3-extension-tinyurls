@@ -65,7 +65,7 @@ class TypoLinkTest extends TestCase
      */
     protected $typoLinkHook;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->tinyUrlApiMock = $this->createMock(Api::class);
         $this->typoLinkHook = new TypoLink();

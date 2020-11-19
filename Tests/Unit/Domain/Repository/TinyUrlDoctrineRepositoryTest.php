@@ -70,7 +70,7 @@ class TinyUrlDoctrineRepositoryTest extends TestCase
      */
     protected $extensionConfiugrationMock;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS']['tinyurls'] = [];
 

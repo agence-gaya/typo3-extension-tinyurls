@@ -31,7 +31,7 @@ class ApiTest extends TestCase
      */
     protected $tinyUrlGeneratorMock;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->tinyUrlGeneratorMock = $this->createMock(TinyUrlGenerator::class);
 

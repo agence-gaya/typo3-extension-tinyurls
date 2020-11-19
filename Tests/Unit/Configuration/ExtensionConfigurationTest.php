@@ -30,7 +30,7 @@ class ExtensionConfigurationTest extends TestCase
      */
     protected $extensionConfiguration;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS']['tinyurls'] = [];
         $this->extensionConfiguration = new ExtensionConfiguration();

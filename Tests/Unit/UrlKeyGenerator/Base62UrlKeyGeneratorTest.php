@@ -39,7 +39,7 @@ class Base62UrlKeyGeneratorTest extends TestCase
      */
     protected $generalUtilityMock;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->extensionConfigurationMock = $this->createMock(ExtensionConfiguration::class);
         $this->generalUtilityMock = $this->createMock(GeneralUtilityWrapper::class);

@@ -35,7 +35,7 @@ class TypoScriptConfiguratorTest extends TestCase
      */
     protected $typoScriptConfigurator;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->tinyUrlGeneratorMock = $this->createMock(TinyUrlGenerator::class);
         $this->contentObjectRendererMock = $this->createMock(ContentObjectRenderer::class);
