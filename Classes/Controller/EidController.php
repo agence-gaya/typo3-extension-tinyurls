@@ -74,7 +74,7 @@ class EidController
         $this->typoScriptFrontendController = $typoScriptFrontendController;
     }
 
-    public function tinyUrlRedirect(ServerRequestInterface $request, ResponseInterface $response): ResponseInterface
+    public function tinyUrlRedirect(ServerRequestInterface $request): ResponseInterface
     {
         $this->getTinyUrlRepository()->purgeInvalidUrls();
 
@@ -87,10 +87,14 @@ class EidController
 
         $this->processUrlHit($tinyUrl);
 
-        $noCacheResponse = $this->addNoCacheHeaders($response);
+        $response = GeneralUtility::makeInstance(
+            \TYPO3\CMS\Core\Http\RedirectResponse::class,
+            $tinyUrl->getTargetUrl(),
+            301
+        );
+        $response = $this->addNoCacheHeaders($response);
 
-        $redirectResponse = $noCacheResponse->withStatus(301);
-        return $redirectResponse->withAddedHeader('Location', $tinyUrl->getTargetUrl());
+        return $response;
     }
 
     protected function addNoCacheHeaders(ResponseInterface $response)
